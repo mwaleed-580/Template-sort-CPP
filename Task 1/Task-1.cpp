@@ -18,7 +18,17 @@ void printArray(T arr, int size) {
 
 template <typename T>
 void selectionSort(T arr, int size) {
-
+    for (int i = 0; i < size - 1; i++)
+    {
+        int n = i;
+        for (int j = i + 1; j < size - 1; j++)
+        {
+            if (arr[j] < arr[n]) {
+                n = j;
+            }
+        }
+        swap(arr[i], arr[n]);
+    }
 }
 
 int main() {
